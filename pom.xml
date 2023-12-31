@@ -7,6 +7,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>guli-mall</name>
 	<description>聚合服务</description>
+	<packaging>pom</packaging>
 
 	<modules>
 		<module>guli-coupon</module>
@@ -14,6 +15,9 @@
 		<module>guli-order</module>
 		<module>guli-ware</module>
 		<module>guli-product</module>
+		<module>renren-fast</module>
+		<module>renren-generator</module>
+		<module>gulimall-common</module>
 	</modules>
 
 </project>
