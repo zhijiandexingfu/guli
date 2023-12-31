@@ -1,4 +1,4 @@
-package com.atguigu.coupon;
+package com.atguigu.coupon.gulicoupon;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
