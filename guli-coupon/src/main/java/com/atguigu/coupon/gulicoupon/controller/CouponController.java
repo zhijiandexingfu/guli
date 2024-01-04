@@ -40,6 +40,13 @@ public class CouponController {
         return R.ok().put("page", page);
     }
 
+    @RequestMapping("/member/list")
+    public R memberCoupons(){
+        CouponEntity coupon = new CouponEntity();
+        coupon.setCouponName("满100减20");
+        return  R.ok().put("counpons",Arrays.asList(coupon));
+    }
+
 
     /**
      * 信息

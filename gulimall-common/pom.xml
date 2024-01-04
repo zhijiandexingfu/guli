@@ -47,7 +47,6 @@
             <artifactId>commons-lang</artifactId>
             <version>2.6</version>
         </dependency>
-
         <!--        mysql驱动-->
         <dependency>
             <groupId>mysql</groupId>
@@ -81,76 +80,10 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.springframework</groupId>-->
-<!--            <artifactId>spring-webmvc</artifactId>-->
-<!--            <version>5.1.9.RELEASE</version>-->
-<!--            <scope>compile</scope>-->
-<!--        </dependency>-->
-
-<!--        &lt;!&ndash;        springcloudDISCOVERY&ndash;&gt;-->
-<!--        &lt;!&ndash;        为了使用新版本的SpringCloud Feign(使用spring-cloud-loadbalancer) 引入 并排除配置&ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
-<!--            &lt;!&ndash;            不使用Ribbon 进行客户端负载均衡&ndash;&gt;-->
-<!--            <exclusions>-->
-<!--                <exclusion>-->
-<!--                    <groupId>org.springframework.cloud</groupId>-->
-<!--                    <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>-->
-<!--                </exclusion>-->
-<!--            </exclusions>-->
-<!--            <version>2.1.0.RELEASE</version>-->
-<!--        </dependency>-->
-
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-loadbalancer</artifactId>-->
-<!--            <version>2.2.2.RELEASE</version>-->
-<!--        </dependency>-->
-
-<!--        &lt;!&ndash;        nacos配置中心&ndash;&gt;-->
-<!--        &lt;!&ndash;        <dependency>&ndash;&gt;-->
-<!--        &lt;!&ndash;            <groupId>com.alibaba.cloud</groupId>&ndash;&gt;-->
-<!--        &lt;!&ndash;            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>&ndash;&gt;-->
-<!--        &lt;!&ndash;        </dependency>&ndash;&gt;-->
-
-<!--        &lt;!&ndash;bookstrap启动器&ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-bootstrap</artifactId>-->
-<!--            <version>3.0.4</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-dependencies</artifactId>-->
-<!--            <version>Hoxton.RELEASE</version>-->
-<!--            <type>pom</type>-->
-<!--            <scope>import</scope>-->
-<!--        </dependency>-->
-
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-commons</artifactId>-->
-<!--            <version>2.2.9.RELEASE</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-loadbalancer</artifactId>-->
-<!--            <version>2.2.2.RELEASE</version>-->
-<!--        </dependency>-->
-<!--    </dependencies>-->
-<!--    <dependencyManagement>-->
-<!--        <dependencies>-->
-<!--            <dependency>-->
-<!--                <groupId>com.alibaba.cloud</groupId>-->
-<!--                <artifactId>spring-cloud-alibaba-dependencies</artifactId>-->
-<!--                <version>2.2.7.RELEASE</version>-->
-<!--                <type>pom</type>-->
-<!--                <scope>import</scope>-->
-<!--            </dependency>-->
-<!--        </dependencies>-->
-<!--    </dependencyManagement>-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>
@@ -168,7 +101,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-        </dependencies>
+          </dependencies>
     </dependencyManagement>
 
 </project>
