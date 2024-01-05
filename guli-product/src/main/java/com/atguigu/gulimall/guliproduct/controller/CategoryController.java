@@ -1,6 +1,7 @@
 package com.atguigu.gulimall.guliproduct.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +41,14 @@ public class CategoryController {
         return R.ok().put("page", page);
     }
 
+    /**
+     * 列表
+     */
+    @RequestMapping("/getMenulist")
+    public R getMenulist(){
+        List<CategoryEntity> CategoryList =  categoryService.getMenulist();
+        return R.ok().put("data", CategoryList);
+    }
 
     /**
      * 信息

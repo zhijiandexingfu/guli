@@ -6,7 +6,19 @@
 	<groupId>com.atguigu.gulimall</groupId>
 	<artifactId>guli-product</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>guli-product</name>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <name>guli-product</name>
 	<description>guli-product</description>
 	<dependencies>
 		<dependency>
