@@ -32,15 +32,19 @@ spring:
           predicates:
             - Query=url,qq
 
+        - id: product_route
+          uri: lb://gulimall-product
+          predicates:
+            - Path=/api/guliproduct/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
+
         - id: admin_route
           uri: lb://gulimall-renren-fast
           predicates:
             - Path=/api/**
           filters:
             - RewritePath=/api/(?<segment>.*),/renren-fast/$\{segment}
-
-
-
 #        - id: admin_route
 #          uri: lb://renren-fast
 #          predicates:
