@@ -52,6 +52,12 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
         return res;
     }
 
+    @Override
+    public void deleteByIds(List<Long> asList) {
+        //todo 检查当前id是否有使用
+        baseMapper.deleteBatchIds(asList);
+    }
+
     private List<CategoryEntity> buildChildrenList(CategoryEntity curMenu, List<CategoryEntity> allMenu) {
         List<CategoryEntity> childrenMenuList = allMenu
                 .stream()
