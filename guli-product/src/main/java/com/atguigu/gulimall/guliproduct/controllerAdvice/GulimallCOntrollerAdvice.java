@@ -30,7 +30,8 @@ public class GulimallCOntrollerAdvice {
 
     @ExceptionHandler(Throwable.class)
     public R generalExceptionHandler(Throwable e){
-        log.error("e.message{},error's type{}", ExceptionEnum.GENERAL_ERR.getCode(),ExceptionEnum.VALIDATE_ERR.getDesc());
+        log.error("e.message{},error's info{}", ExceptionEnum.GENERAL_ERR.getCode(),e.getMessage());
+       // log.error("e.message{},error's type{}", ExceptionEnum.GENERAL_ERR.getCode(),ExceptionEnum.VALIDATE_ERR.getDesc());
         return R.error(ExceptionEnum.GENERAL_ERR.getCode(), ExceptionEnum.GENERAL_ERR.getDesc());
     }
 
