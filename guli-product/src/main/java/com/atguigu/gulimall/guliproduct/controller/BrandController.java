@@ -117,15 +117,15 @@ public class BrandController {
      */
 
     @RequestMapping("/save")
-    public R save(@Validated @RequestBody BrandEntity brand, BindingResult result) {
-        HashMap<String, String> map = new HashMap<>();
-        if (result.hasErrors()) {
-            result.getFieldErrors().stream()
-                    .forEach((ele) -> {
-                        map.put(ele.getField(), ele.getDefaultMessage());
-                    });
-            return R.error(400, "数据不符合规范").put("data", map);
-        }
+    public R save(@Validated @RequestBody BrandEntity brand) {
+//        HashMap<String, String> map = new HashMap<>();
+//        if (result.hasErrors()) {
+//            result.getFieldErrors().stream()
+//                    .forEach((ele) -> {
+//                        map.put(ele.getField(), ele.getDefaultMessage());
+//                    });
+//            return R.error(400, "数据不符合规范").put("data", map);
+//        }
         brandService.save(brand);
         return R.ok();
 
