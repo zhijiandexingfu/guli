@@ -3,6 +3,7 @@ package com.atguigu.gulimall.guliproduct.entity;
 import com.atguigu.common.validator.group.AddGroup;
 import com.atguigu.common.validator.group.ListValue;
 import com.atguigu.common.validator.group.UpdateGroup;
+import com.atguigu.common.validator.group.UpdateStatusGroup;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
@@ -50,8 +51,8 @@ public class BrandEntity implements Serializable {
 	/**
 	 * 显示状态[0-不显示；1-显示]
 	 */
-	@NotNull(message = "展示状态不能为空",groups = {AddGroup.class,UpdateGroup.class})
-	@ListValue(vals = {0,1},groups = {AddGroup.class})
+	@NotNull(message = "展示状态不能为空",groups = {AddGroup.class,UpdateGroup.class,UpdateStatusGroup.class})
+	@ListValue(vals = {0,1},groups = {AddGroup.class,UpdateStatusGroup.class})
 	private Integer showStatus;
 	/**
 	 * 检索首字母
