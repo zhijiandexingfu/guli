@@ -12,6 +12,8 @@ import com.aliyun.oss.ClientException;
 import com.aliyun.oss.OSS;
 import com.aliyun.oss.OSSClient;
 import com.aliyun.oss.OSSException;
+import com.atguigu.common.validator.group.AddGroup;
+import com.atguigu.common.validator.group.UpdateGroup;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
@@ -117,7 +119,7 @@ public class BrandController {
      */
 
     @RequestMapping("/save")
-    public R save(@Validated @RequestBody BrandEntity brand) {
+    public R save(@Validated(AddGroup.class) @RequestBody BrandEntity brand) {
 //        HashMap<String, String> map = new HashMap<>();
 //        if (result.hasErrors()) {
 //            result.getFieldErrors().stream()
@@ -135,9 +137,8 @@ public class BrandController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody BrandEntity brand) {
+    public R update(@Validated(UpdateGroup.class) @RequestBody BrandEntity brand) {
         brandService.updateById(brand);
-
         return R.ok();
     }
 

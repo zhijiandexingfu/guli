@@ -3,6 +3,12 @@
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+    alicloud:
+      access-key: LTAI5tJYEVuA3QFGtJpBERar
+      secret-key: HK8jrVaT8gcpV5ISWxCtlP8Ua8mVpU
+      oss:
+        endpoint: oss-cn-shenzhen.aliyuncs.com
+
   application:
     name: gulimall-product
   datasource:
@@ -12,13 +18,26 @@
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 
+
  mybatis-plus:
    mapper-locations: classpath:/mapper/**/*.xml
    global-config:
      db-config:
        id-type: auto
+       logic-delete-value: 1
+       logic-not-delete-value: 0
+
+
 
  server:
    port: 10000
+
+ logging:
+   level:
+     com.atguigu.gulimall.guliproduct: debug
+
+
+
+
 
 
