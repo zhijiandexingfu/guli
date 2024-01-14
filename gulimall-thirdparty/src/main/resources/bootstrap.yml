@@ -1,0 +1,17 @@
+spring:
+
+
+  application:
+    name: gulimall-thirdparty
+
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: 9f77a80c-17b4-4421-b2cd-579be2cfa804
+
+#    alicloud:
+#      access-key: LTAI5tJYEVuA3QFGtJpBERar
+#      secret-key: HK8jrVaT8gcpV5ISWxCtlP8Ua8mVpU
+#      oss:
+#          endpoint: oss-cn-shenzhen.aliyuncs.com
